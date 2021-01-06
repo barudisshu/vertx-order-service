@@ -31,7 +31,11 @@ public class OrderDatabaseVerticle extends AbstractVerticle {
             .setPort(config().getInteger(CONFIG_PG_PORT, 5432))
             .setDatabase(config().getString(CONFIG_PG_DATABASE))
             .setUser(config().getString(CONFIG_PG_USERNAME))
-            .setPassword(config().getString(CONFIG_PG_PASSWORD));
+            .setPassword(config().getString(CONFIG_PG_PASSWORD))
+            .setIdleTimeout(30)
+            .setReconnectAttempts(2)
+            .setReconnectInterval(1000)
+            .setPreparedStatementCacheMaxSize(10);
 
     // Pool Options
     PoolOptions poolOptions =

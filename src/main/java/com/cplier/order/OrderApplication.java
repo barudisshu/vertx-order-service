@@ -12,7 +12,7 @@ public class OrderApplication {
     Vertx vertx = Vertx.vertx();
 
     vertx.deployVerticle(
-        new OrderDatabaseVerticle(),
+        OrderDatabaseVerticle.class.getName(),
         new DeploymentOptions()
             .setConfig(
                 new JsonObject()
@@ -22,9 +22,9 @@ public class OrderApplication {
                     .put("postgresql.database", "postgres")
                     .put("postgresql.username", "postgres")
                     .put("postgresql.password", "postgres")
-                    .put("postgresql.pool.maxsize", 20)));
+                    .put("postgresql.pool.maxsize", 10)));
     vertx.deployVerticle(
-        new HttpRxVerticle(),
+        HttpRxVerticle.class.getName(),
         new DeploymentOptions()
             .setConfig(
                 new JsonObject()
