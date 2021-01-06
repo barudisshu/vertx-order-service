@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ericsson.cces</groupId>
+    <groupId>com.cplier</groupId>
     <artifactId>vertx-order-service</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -145,7 +145,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.ericsson.cces.order.OrderApplication</mainClass>
+                    <mainClass>com.cplier.order.OrderApplication</mainClass>
                     <systemProperties>
                         <systemProperty>
                             <key>vertx.logger-delegate-factory-class-name</key>

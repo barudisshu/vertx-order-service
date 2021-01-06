@@ -7,7 +7,7 @@
 
     <logger name="io.netty" level="warn"/>
     <logger name="io.vertx" level="DEBUG"/>
-    <logger name="com.ericsson" level="DEBUG"/>
+    <logger name="com.cplier" level="DEBUG"/>
 
     <root level="INFO">
         <appender-ref ref="STDOUT"/>

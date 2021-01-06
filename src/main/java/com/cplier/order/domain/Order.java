@@ -1,4 +1,4 @@
-package com.ericsson.cces.order.domain;
+package com.cplier.order.domain;
 
 import io.vertx.codegen.annotations.DataObject;
 

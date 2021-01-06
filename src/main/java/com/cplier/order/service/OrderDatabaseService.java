@@ -1,7 +1,7 @@
-package com.ericsson.cces.order.service;
+package com.cplier.order.service;
 
-import com.ericsson.cces.order.domain.Order;
-import com.ericsson.cces.order.service.impl.OrderDatabaseServiceImpl;
+import com.cplier.order.domain.Order;
+import com.cplier.order.service.impl.OrderDatabaseServiceImpl;
 import io.vertx.codegen.annotations.GenIgnore;
 import io.vertx.codegen.annotations.ProxyGen;
 import io.vertx.codegen.annotations.VertxGen;
@@ -23,8 +23,8 @@ public interface OrderDatabaseService {
   }
 
   @GenIgnore
-  static com.ericsson.cces.order.service.reactivex.OrderDatabaseService createProxy(Vertx vertx, String address) {
-    return new com.ericsson.cces.order.service.reactivex.OrderDatabaseService(new OrderDatabaseServiceVertxEBProxy(vertx, address));
+  static com.cplier.order.service.reactivex.OrderDatabaseService createProxy(Vertx vertx, String address) {
+    return new com.cplier.order.service.reactivex.OrderDatabaseService(new OrderDatabaseServiceVertxEBProxy(vertx, address));
   }
 
   void createOrder(Order order, Handler<AsyncResult<JsonObject>> resultHandler);

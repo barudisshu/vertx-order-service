@@ -1,8 +1,8 @@
-package com.ericsson.cces.order.verticle;
+package com.cplier.order.verticle;
 
-import com.ericsson.cces.order.domain.Order;
-import com.ericsson.cces.order.exception.PKNotFoundException;
-import com.ericsson.cces.order.service.reactivex.OrderDatabaseService;
+import com.cplier.order.domain.Order;
+import com.cplier.order.exception.PKNotFoundException;
+import com.cplier.order.service.reactivex.OrderDatabaseService;
 import io.reactivex.Completable;
 import io.vertx.core.Handler;
 import io.vertx.core.json.Json;
@@ -28,7 +28,7 @@ public class HttpRxVerticle extends AbstractVerticle {
     HttpServer server = vertx.createHttpServer();
 
     OrderDatabaseService orderDatabaseService =
-        com.ericsson.cces.order.service.OrderDatabaseService.createProxy(
+        com.cplier.order.service.OrderDatabaseService.createProxy(
             vertx.getDelegate(), config().getString(CONFIG_DB_EB_QUEUE));
 
     // index, home

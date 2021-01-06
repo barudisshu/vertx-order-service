@@ -1,7 +1,7 @@
-package com.ericsson.cces.order;
+package com.cplier.order;
 
-import com.ericsson.cces.order.service.OrderDatabaseVerticle;
-import com.ericsson.cces.order.verticle.HttpRxVerticle;
+import com.cplier.order.verticle.HttpRxVerticle;
+import com.cplier.order.service.OrderDatabaseVerticle;
 import io.vertx.core.DeploymentOptions;
 import io.vertx.core.json.JsonObject;
 import io.vertx.reactivex.core.Vertx;

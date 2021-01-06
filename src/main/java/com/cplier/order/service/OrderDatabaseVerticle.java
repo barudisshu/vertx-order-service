@@ -1,4 +1,4 @@
-package com.ericsson.cces.order.service;
+package com.cplier.order.service;
 
 import io.vertx.core.Promise;
 import io.vertx.pgclient.PgConnectOptions;

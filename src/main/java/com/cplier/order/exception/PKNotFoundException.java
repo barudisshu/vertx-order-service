@@ -1,4 +1,4 @@
-package com.ericsson.cces.order.exception;
+package com.cplier.order.exception;
 
 import io.vertx.core.json.JsonObject;
 import io.vertx.serviceproxy.ServiceException;
